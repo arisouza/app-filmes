@@ -1,0 +1,59 @@
+# Arquivos/dirs do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Diretórios do Android Studio
+.idea/
+.gradle/
+local.properties
+*.iml
+
+# Build output
+/build/
+*/build/
+
+# Arquivos gerados automaticamente
+captures/
+.externalNativeBuild/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
+
+# Configurações do Android Studio
+.cxx/
+.vscode/
+
+# Arquivos do Kotlin/Java
+*.class
+*.jar
+*.war
+*.ear
+
+# NDK / CMake
+cmake-build-debug/
+
+# Firebase
+google-services.json
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Test coverage / reports
+*.ec
+coverage/
+
+# Arquivos de cache
+.cache/
+.kotlinc/
+
+# Arquivos do lint
+lint/intermediates/
+lint/generated/
+
+# IntelliJ
+out/
+
+# Arquivos específicos de em
