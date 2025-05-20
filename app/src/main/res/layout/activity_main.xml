@@ -1,33 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical">
+    android:background="#D6C3C3">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end">
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/abril_fatface"
+        android:text="InfoFilmes"
+        android:textColor="#342626"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnAdicionar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Novo Filme"
-            android:layout_marginEnd="8dp"/>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif"
+        android:text="Se infome sobre seus filmes favoritos :)"
+        app:layout_constraintBottom_toTopOf="@+id/btnPesquisar"
+        app:layout_constraintEnd_toEndOf="@+id/btnPesquisar"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <Button
-            android:id="@+id/btnPesquisar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pesquisar"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnAdicionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="6dp"
+        android:backgroundTint="#342626"
+        android:fontFamily="serif"
+        android:text="Novo Filme"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewFilmes"
+        app:layout_constraintEnd_toStartOf="@+id/btnPesquisar"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPesquisar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:backgroundTint="#342626"
+        android:fontFamily="serif"
+        android:text="Pesquisar"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewFilmes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAdicionar"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewFilmes"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="12dp" />
-</LinearLayout>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPesquisar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

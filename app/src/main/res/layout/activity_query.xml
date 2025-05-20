@@ -3,25 +3,30 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#D6C3C3">>
 
     <EditText
         android:id="@+id/edtBuscar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:hint="Buscar por nome" />
 
     <Button
         android:id="@+id/btnBuscar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buscar"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4D3333"
+        android:fontFamily="serif"
+        android:text="Buscar" />
 
     <TextView
         android:id="@+id/txtResultados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="Resultados aparecerão aqui"
         android:paddingTop="16dp" />
 </LinearLayout>
